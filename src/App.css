@@ -1,6 +1,9 @@
+body {
+    background-image: url('./img/water');
+}
 .card {
-    background-color: lightblue;
-    color: rgb(7, 7, 69);
+    background-color: aquamarine;
+    color: rgb(171, 13, 47);
     text-align: center;
     border-color: red;
     white-space: nowrap;

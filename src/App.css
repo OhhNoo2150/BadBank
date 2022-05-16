@@ -1,0 +1,39 @@
+.card {
+    background-color: lightblue;
+    color: rgb(7, 7, 69);
+    text-align: center;
+    border-color: red;
+    white-space: nowrap;
+}
+.card:hover {
+    background-color: darkblue;
+    color: white;
+}
+.card .btn {
+    border-color: red;
+
+}
+
+.card .btn:hover {
+    color: white;
+    background-color: red;
+    transition: 0.4s ease-in-out;
+}
+.Container {
+    background-color: skyblue;
+    color: lightcoral;
+}
+.navbar {
+    color: lightcoral !important;
+    background-color: skyblue !important;
+}
+.navbar-brand {
+    font-weight: 700;
+    color: red;
+    text-shadow: black 3rem;
+}
+.nav-link:hover {
+    background-color: lightcoral;
+    border-radius: 15px;
+    transition: 0.4s ease-in;
+}

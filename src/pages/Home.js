@@ -1,5 +1,5 @@
 import React from 'react'
-import Bankimage from '../img/bankblue.png'
+import Bankimage from '../img/BadBankLogo4.gif'
 
 const Home = () => {
     return (
@@ -7,10 +7,10 @@ const Home = () => {
             <img src={Bankimage} alt="bad bank" />
             <div className="card-body">
                 <h5 className="card-title">Banking Made Difficult</h5>
-                <p className="card-text">Welcome to Bad Bank: </p>
-                <p>Where Security is our last priority</p>
+                <p className="card-text">hours of operation:  </p>
+                <p>M W F from 1pm to 3pm  </p>
                 <h6>Please click the button below to:</h6>
-                <a href="/CreateAccount" className="btn btn-primary">Create an Account</a>
+                <a href="/CreateAccount" className="btn btn-warning">Create an Account</a>
             </div>
         </div>
     );

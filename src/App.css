@@ -1,19 +1,54 @@
 body {
-    background-image: url('./img/water');
+    background-image: url('./img/LobbyBG3');
+    background-repeat: no-repeat;
+
+    background-size: 100%;
 }
 .card {
-    background-color: aquamarine;
-    color: rgb(171, 13, 47);
+    background-color: black;
+    color: rgb(240, 228, 7);
     text-align: center;
-    border-color: red;
+    border: 4px solid transparent;
+    border-image: conic-gradient(from var(--angle), #ff0, #f0f, #f00, #00f, #0f0) 1;
+    border-image-slice: 1;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    animation: 10s rotate linear infinite;
+    --angle: 0deg;
     white-space: nowrap;
+    text-shadow: rgb(244, 235, 236) 5px 5px 10px;
+    text-decoration:underline;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 200px;
+
+    }
+
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    @property --angle {
+        syntax: '<angle>';
+        initial-value: 0deg;
+        inherits: false;
 }
 .card:hover {
-    background-color: darkblue;
+    background-image: url('./img/blueMarble');
     color: white;
+    text-shadow: black 5px 5px 5px;
+    transition: 0.9s ease-in-out;
 }
 .card .btn {
     border-color: red;
+    color: rgb(124, 7, 234);
+    text-shadow: rgb(244, 235, 236) 5px 5px 10px;
+    border: 3px solid transparent;
+    border-image: conic-gradient(from var(--angle), #ff0, #f0f, #f00, #00f, #0f0) 1;
+    border-radius: 5px;
+    border-image-slice: 1;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -27,13 +62,18 @@ body {
     color: lightcoral;
 }
 .navbar {
-    color: lightcoral !important;
-    background-color: skyblue !important;
+    color:beige !important;
+    background-color: black !important;
 }
 .navbar-brand {
     font-weight: 700;
     color: red;
-    text-shadow: black 3rem;
+    text-shadow: rgb(235, 112, 112) 5px 5px 10px;
+    margin-right: 500px;
+    }
+
+    .nav-link {
+        color: beige;
 }
 .nav-link:hover {
     background-color: lightcoral;
@@ -41,6 +81,6 @@ body {
     transition: 0.4s ease-in;
 }
 .table {
-    background-color: skyblue;
+    background-image: url('./img/alldataBG2');
     opacity: 0.825;
 }

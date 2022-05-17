@@ -9,6 +9,8 @@ export default function AllData({ users }) {
                     <th>Name</th>
                     <th>Email</th>
                     <th>Password</th>
+                    <th>Deposit</th>
+                    <th>Withdraw</th>
                     <th>Balance</th>
                 </tr>
             </thead>
@@ -19,6 +21,8 @@ export default function AllData({ users }) {
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td>{user.password}</td>
+                            <td>{user.deposit}</td>
+                            <td>{user.withdraw}</td>
                             <td>{user.balance}</td>
                         </tr>
                     );

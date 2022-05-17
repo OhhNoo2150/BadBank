@@ -10,7 +10,8 @@ const Home = () => {
                 <p className="card-text">hours of operation:  </p>
                 <p>M W F from 1pm to 3pm  </p>
                 <h6>Please click the button below to:</h6>
-                <a href="/CreateAccount" className="btn btn-warning">Create an Account</a>
+                {/* added a # before /CreateAccount to see if it will fix the linking issue */}
+                <a href="#/CreateAccount" className="btn btn-warning">Create an Account</a>
             </div>
         </div>
     );

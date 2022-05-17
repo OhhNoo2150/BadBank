@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BadBank/static/css/main.f3ba960a.css",
+    "main.css": "/BadBank/static/css/main.064c9bc1.css",
     "main.js": "/BadBank/static/js/main.4f7cfb5a.js",
     "static/js/787.a84f74d6.chunk.js": "/BadBank/static/js/787.a84f74d6.chunk.js",
     "static/media/BadBankLogo4.gif": "/BadBank/static/media/BadBankLogo4.6ee071c06e3eef619906.gif",
@@ -8,12 +8,12 @@
     "static/media/alldataBG2": "/BadBank/static/media/alldataBG2.1a7021540e881418d9b3",
     "static/media/LobbyBG3": "/BadBank/static/media/LobbyBG3.3363f150b916dec9ccd9",
     "index.html": "/BadBank/index.html",
-    "main.f3ba960a.css.map": "/BadBank/static/css/main.f3ba960a.css.map",
+    "main.064c9bc1.css.map": "/BadBank/static/css/main.064c9bc1.css.map",
     "main.4f7cfb5a.js.map": "/BadBank/static/js/main.4f7cfb5a.js.map",
     "787.a84f74d6.chunk.js.map": "/BadBank/static/js/787.a84f74d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3ba960a.css",
+    "static/css/main.064c9bc1.css",
     "static/js/main.4f7cfb5a.js"
   ]
 }

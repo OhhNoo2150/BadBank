@@ -40,3 +40,7 @@ body {
     border-radius: 15px;
     transition: 0.4s ease-in;
 }
+.table {
+    background-color: skyblue;
+    opacity: 0.825;
+}

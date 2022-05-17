@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/BadBank/static/css/main.0b66491a.css",
-    "main.js": "/BadBank/static/js/main.a423a280.js",
+    "main.css": "/BadBank/static/css/main.f3ba960a.css",
+    "main.js": "/BadBank/static/js/main.4f7cfb5a.js",
     "static/js/787.a84f74d6.chunk.js": "/BadBank/static/js/787.a84f74d6.chunk.js",
-    "static/media/water": "/BadBank/static/media/water.3b52724459da18b445fa",
-    "static/media/bankblue.png": "/BadBank/static/media/bankblue.04425c546ed9626a9208.png",
+    "static/media/BadBankLogo4.gif": "/BadBank/static/media/BadBankLogo4.6ee071c06e3eef619906.gif",
+    "static/media/blueMarble": "/BadBank/static/media/blueMarble.7daec67daf8f61e878e8",
+    "static/media/alldataBG2": "/BadBank/static/media/alldataBG2.1a7021540e881418d9b3",
+    "static/media/LobbyBG3": "/BadBank/static/media/LobbyBG3.3363f150b916dec9ccd9",
     "index.html": "/BadBank/index.html",
-    "main.0b66491a.css.map": "/BadBank/static/css/main.0b66491a.css.map",
-    "main.a423a280.js.map": "/BadBank/static/js/main.a423a280.js.map",
+    "main.f3ba960a.css.map": "/BadBank/static/css/main.f3ba960a.css.map",
+    "main.4f7cfb5a.js.map": "/BadBank/static/js/main.4f7cfb5a.js.map",
     "787.a84f74d6.chunk.js.map": "/BadBank/static/js/787.a84f74d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b66491a.css",
-    "static/js/main.a423a280.js"
+    "static/css/main.f3ba960a.css",
+    "static/js/main.4f7cfb5a.js"
   ]
 }

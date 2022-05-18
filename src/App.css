@@ -94,8 +94,14 @@ body {
 }
 .navbar-toggler {
     background-color: red;
+    opacity: 0.85;
 }
 
 .navbar-toggler-icon {
     color: red !important;
+}
+.navbar-toggler:hover {
+    /* background-color: rgba(245, 245, 220, 0.75); */
+    background-color: lightcoral;
+
 }

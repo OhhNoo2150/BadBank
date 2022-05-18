@@ -92,3 +92,10 @@ body {
 .nav-link:focus {
     color: beige;
 }
+.navbar-toggler {
+    background-color: red;
+}
+
+.navbar-toggler-icon {
+    color: red !important;
+}

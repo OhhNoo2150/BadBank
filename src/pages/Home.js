@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Bankimage from '../img/BadBankLogo4.gif'
 
 const Home = () => {
@@ -11,7 +12,8 @@ const Home = () => {
                 <p>M W F from 1pm to 3pm  </p>
                 <h6>Please click the button below to:</h6>
                 {/* added a # before /CreateAccount to see if it will fix the linking issue */}
-                <a href="#/CreateAccount" className="btn btn-warning">Create an Account</a>
+                {/* <a href="#/CreateAccount" className="btn btn-warning">Create an Account</a> */}
+                <Link to="/CreateAccount" className="btn btn-warning">Create An Account</Link>
             </div>
         </div>
     );

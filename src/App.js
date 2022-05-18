@@ -11,9 +11,19 @@ import { Container, Row } from 'react-bootstrap';
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [logs, setLogs] = useState([]);
   const addUser = (name, email, password) => {
     setUsers([
       ...users,
+      {
+        name: name,
+        email: email,
+        password: password,
+        balance: 0,
+      }
+    ])
+    setLogs([
+      ...logs,
       {
         name: name,
         email: email,
@@ -31,6 +41,15 @@ function App() {
         balance: loggedInUser.balance + value
       }
     ])
+    setLogs([
+      ...logs,
+      {
+        ...loggedInUser,
+        balance: loggedInUser.balance + value,
+        deposit: value > 0 ? value : undefined,
+        withdraw: value < 0 ? value : undefined,
+      }
+    ])
   }
   return (
     <Router>
@@ -42,7 +61,7 @@ function App() {
             <Route path='/CreateAccount' element={<CreateAccount addUser={addUser} />} />
             <Route path='/Withdraw' element={<Withdraw onAdjust={adjustUserBalance} user={users[users.length - 1]} />} />
             <Route path='/Deposits' element={<Deposit onAdjust={adjustUserBalance} user={users[users.length - 1]} />} />
-            <Route path='/AllData' element={<AllData users={users} />} />
+            <Route path='/AllData' element={<AllData logs={logs} />} />
           </Routes>
         </Row>
       </Container>

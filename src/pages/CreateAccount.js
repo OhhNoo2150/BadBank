@@ -24,19 +24,19 @@ const CreateAccount = ({ addUser }) => {
                         <div className="mb-3 row">
                             <label for="staticEmail" className="col-sm-2 col-form-label">Email</label>
                             <div className="col-sm-10">
-                                <input type="text" className="form-control" id="staticEmail" placeholder="email@example.com" value={email} onChange={(event) => { setEmail(event.target.value) }} />
+                                <input required type="email" className="form-control" id="staticEmail" placeholder="email@example.com" value={email} onChange={(event) => { setEmail(event.target.value) }} />
                             </div>
                         </div>
                         <div className="mb-3 row">
                             <label for="staticName" className="col-sm-2 col-form-label">Name</label>
                             <div className="col-sm-10">
-                                <input type="text" className="form-control" id="staticName" placeholder="ex: John Doe" value={name} onChange={(event) => { setName(event.target.value) }} />
+                                <input required type="text" className="form-control" id="staticName" placeholder="ex: John Doe" value={name} onChange={(event) => { setName(event.target.value) }} />
                             </div>
                         </div>
                         <div className="mb-3 row">
                             <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
                             <div className="col-sm-10">
-                                <input type="password" className="form-control" id="inputPassword" value={password} onChange={(event) => { setPassword(event.target.value) }} />
+                                <input required type="password" className="form-control" id="inputPassword" value={password} onChange={(event) => { setPassword(event.target.value) }} />
                             </div>
                         </div>
                         <button className='btn btn-primary'>Create Account</button>

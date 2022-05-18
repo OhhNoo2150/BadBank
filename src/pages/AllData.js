@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Table from 'react-bootstrap/Table';
 
-export default function AllData({ users }) {
+export default function AllData({ logs }) {
     return (
         <Table>
             <thead>
@@ -15,15 +15,15 @@ export default function AllData({ users }) {
                 </tr>
             </thead>
             <tbody>
-                {users.map((user) => {
+                {logs.map((log) => {
                     return (
                         <tr>
-                            <td>{user.name}</td>
-                            <td>{user.email}</td>
-                            <td>{user.password}</td>
-                            <td>{user.deposit}</td>
-                            <td>{user.withdraw}</td>
-                            <td>{user.balance}</td>
+                            <td>{log.name}</td>
+                            <td>{log.email}</td>
+                            <td>{log.password}</td>
+                            <td>{log.deposit}</td>
+                            <td>{log.withdraw}</td>
+                            <td>{log.balance}</td>
                         </tr>
                     );
                 })}

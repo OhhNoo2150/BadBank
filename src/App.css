@@ -1,38 +1,38 @@
 body {
     background-image: url('./img/LobbyBG3');
     background-repeat: no-repeat;
-
-    background-size: 100%;
+    background-size: cover;
+    min-height: 100vh;
 }
 .card {
     background-color: rgba(0, 0, 0, 0.75);
     color: rgb(240, 228, 7);
     text-align: center;
     border: 4px solid transparent;
-    border-image: conic-gradient(from var(--angle), #ff0, #f0f, #f00, #00f, #0f0) 1;
+    border-image: conic-gradient(from var(--angle), gold, #f0f, #f00, #00f, #0f0) 1;
     border-image-slice: 1;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
     animation: 10s rotate linear infinite;
     --angle: 0deg;
     white-space: nowrap;
     text-shadow: rgb(244, 235, 236) 5px 5px 10px;
-    text-decoration:underline;
+    text-decoration: underline;
     text-align: center;
     font-weight: 500;
     margin-top: 200px;
 
-    }
+}
 
-    @keyframes rotate {
-        to {
-            --angle: 360deg;
-        }
+@keyframes rotate {
+    to {
+        --angle: 360deg;
     }
+}
 
-    @property --angle {
-        syntax: '<angle>';
-        initial-value: 0deg;
-        inherits: false;
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
 }
 .card:hover {
     background-image: url('./img/blueMarble');
@@ -58,29 +58,37 @@ body {
     transition: 0.4s ease-in-out;
 }
 .Container {
+    margin: 0;
+    padding: 0;
     background-color: skyblue;
     color: lightcoral;
 }
 .navbar {
-    color:beige !important;
+    color: beige !important;
     background-color: black !important;
 }
 .navbar-brand {
     font-weight: 700;
     color: red;
     text-shadow: rgb(235, 112, 112) 5px 5px 10px;
-    margin-right: 500px;
+    margin-right: 150px;
     }
 
-    .nav-link {
-        color: beige;
+.nav-link {
+    color: beige;
+    white-space: nowrap;
 }
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     background-color: lightcoral;
+    color: rgb(247, 240, 240);
     border-radius: 15px;
     transition: 0.4s ease-in;
 }
 .table {
     background-image: url('./img/alldataBG2');
     opacity: 0.825;
+}
+.nav-link:focus {
+    color: beige;
 }

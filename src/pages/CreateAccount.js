@@ -39,7 +39,7 @@ const CreateAccount = ({ addUser }) => {
                                 <input required type="password" className="form-control" id="inputPassword" value={password} onChange={(event) => { setPassword(event.target.value) }} />
                             </div>
                         </div>
-                        <button className='btn btn-primary'>Create Account</button>
+                        <button className='btn btn-success'>Create Account</button>
                     </form> : <div>
                         <p>Account Created!</p>
                         <button className='btn btn-primary' onClick={resetForm}>Add Another Account</button>

@@ -13,7 +13,7 @@ const Home = () => {
                 <h6>Please click the button below to:</h6>
                 {/* added a # before /CreateAccount to see if it will fix the linking issue */}
                 {/* <a href="#/CreateAccount" className="btn btn-warning">Create an Account</a> */}
-                <Link to="/CreateAccount" className="btn btn-warning">Create An Account</Link>
+                <Link to="/CreateAccount" className="btn btn-success">Create An Account</Link>
             </div>
         </div>
     );

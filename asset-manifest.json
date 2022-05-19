@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/BadBank/static/css/main.d35a4ba3.css",
-    "main.js": "/BadBank/static/js/main.7aadee83.js",
+    "main.css": "/BadBank/static/css/main.350dd7f3.css",
+    "main.js": "/BadBank/static/js/main.86725eb7.js",
     "static/js/787.a84f74d6.chunk.js": "/BadBank/static/js/787.a84f74d6.chunk.js",
     "static/media/BadBankLogo4.gif": "/BadBank/static/media/BadBankLogo4.6ee071c06e3eef619906.gif",
     "static/media/blueMarble": "/BadBank/static/media/blueMarble.7daec67daf8f61e878e8",
     "static/media/alldataBG2": "/BadBank/static/media/alldataBG2.1a7021540e881418d9b3",
     "static/media/LobbyBG3": "/BadBank/static/media/LobbyBG3.3363f150b916dec9ccd9",
     "index.html": "/BadBank/index.html",
-    "main.d35a4ba3.css.map": "/BadBank/static/css/main.d35a4ba3.css.map",
-    "main.7aadee83.js.map": "/BadBank/static/js/main.7aadee83.js.map",
+    "main.350dd7f3.css.map": "/BadBank/static/css/main.350dd7f3.css.map",
+    "main.86725eb7.js.map": "/BadBank/static/js/main.86725eb7.js.map",
     "787.a84f74d6.chunk.js.map": "/BadBank/static/js/787.a84f74d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d35a4ba3.css",
-    "static/js/main.7aadee83.js"
+    "static/css/main.350dd7f3.css",
+    "static/js/main.86725eb7.js"
   ]
 }

@@ -69,8 +69,8 @@ body {
 }
 .navbar-brand {
     font-weight: 700;
-    color: red;
-    text-shadow: rgb(235, 112, 112) 5px 5px 10px;
+    color: green;
+    text-shadow: rgb(5, 203, 9) 5px 5px 10px;
     margin-right: 150px;
     }
 
@@ -93,7 +93,7 @@ body {
     color: beige;
 }
 .navbar-toggler {
-    background-color: red;
+    background-color: green;
     opacity: 0.85;
 }
 

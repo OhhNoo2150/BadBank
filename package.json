@@ -1,0 +1,23 @@
+{
+  "name": "bad-bank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "build": "cd frontend && npm run build",
+    "install": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "cd backend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OhhNoo2150/BadBank.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OhhNoo2150/BadBank/issues"
+  },
+  "homepage": "https://github.com/OhhNoo2150/BadBank#readme"
+}

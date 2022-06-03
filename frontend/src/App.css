@@ -70,11 +70,11 @@ body {
 .navbar-brand {
     font-weight: 700;
     color: green;
-    text-shadow: rgb(5, 203, 9) 3px 3px 10px;
+    text-shadow: rgb(5, 203, 9) 1px 1px 7px;
     margin-right: 150px;
 }
 .navbar-brand:hover {
-    color: lightcoral;
+    color: darkgreen;
 }
 
 .nav-link {

@@ -22,7 +22,7 @@ const Deposits = ({ onAdjust, user }) => {
                     <div className="mb-3 row">
                         <label for="staticEmail" className="col-sm-2 col-form-label">Amount</label>
                         <div className="col-sm-10">
-                            <input type="text" className="form-control" id="staticEmail" placeholder="email@example.com" value={amount} onChange={(event) => { setAmount(+event.target.value) }} />
+                            <input type="number" className="form-control" value={amount} onChange={(event) => { setAmount(+event.target.value) }} />
                         </div>
                     </div>
                     <button className='btn btn-primary'>Deposit</button>

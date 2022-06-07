@@ -4,7 +4,7 @@ const { Schema, model, Types } = mongoose
 
 const schema = new Schema({
     amount: {
-        type: String,
+        type: Number,
         required: true
     },
     user: {

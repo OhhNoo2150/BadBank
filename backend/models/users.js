@@ -14,11 +14,18 @@ const schema = new Schema({
     password: {
         type: String,
         required: true
-    },
-    balance: {
-        type: Number,
-        default: 0
     }
+}, {
+    toJSON: {
+        virtuals: true
+    }
+})
+
+schema.virtual("transactions", {
+    ref: "transactions",
+    localField: "_id",
+    foreignField: "user",
+    justOne: false
 })
 
 module.exports = model("users", schema)

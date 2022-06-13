@@ -9,11 +9,6 @@ const CreateAccount = ({ signInUser }) => {
         signInUser(email, password)
         setSubmitted(true)
     }
-    const resetForm = () => {
-        setEmail('')
-        setPassword('')
-        setSubmitted(false)
-    }
     return (
         <div className='card' style={{ width: "36rem" }}>
             <div className='card-body'>
@@ -31,10 +26,9 @@ const CreateAccount = ({ signInUser }) => {
                                 <input required type="password" className="form-control" id="inputPassword" value={password} onChange={(event) => { setPassword(event.target.value) }} />
                             </div>
                         </div>
-                        <button className='btn btn-success'>Create Account</button>
+                        <button className='btn btn-success'>Sign In</button>
                     </form> : <div>
-                        <p>Account Created!</p>
-                        <button className='btn btn-primary' onClick={resetForm}>Add Another Account</button>
+                        <p>You're Logged In!</p>
                     </div>
                 }
             </div>

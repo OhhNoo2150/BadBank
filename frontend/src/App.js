@@ -101,13 +101,14 @@ function App() {
     });
     let balance = 0;
     for (let transaction of user.transactions) {
+      balance += transaction.amount
       logs.push({
         name: user.name,
         email: user.email,
         password: user.password,
         deposit: transaction.amount > 0 ? transaction.amount : undefined,
         withdraw: transaction.amount < 0 ? transaction.amount : undefined,
-        balance: (balance += transaction.amount),
+        balance
       });
     }
   }

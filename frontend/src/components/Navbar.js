@@ -19,6 +19,9 @@ export default function Navbar({ user }) {
                         <Nav.Link className={location.pathname === "/CreateAccount" ? "active" : ""} as={Link} to="/CreateAccount">
                             Create Account
                         </Nav.Link>
+                        <Nav.Link className={location.pathname === "/SignIn" ? "active" : ""} as={Link} to="/SignIn">
+                            Sign In
+                        </Nav.Link>
                         {user !== undefined && <>
                             <Nav.Link className={location.pathname === "/Deposits" ? "active" : ""} as={Link} to="/Deposits">
                                 Deposit

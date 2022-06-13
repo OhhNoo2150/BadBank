@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home.js';
 import CreateAccount from './pages/CreateAccount';
+import SignIn from './pages/SignIn';
 import Withdraw from './pages/Withdraw';
 import Deposit from './pages/Deposit';
 import AllData from './pages/AllData';
@@ -12,6 +13,10 @@ import { Container, Row } from 'react-bootstrap';
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [currentUserId, setCurrentUserId] = useState();
+
+  const currentUser = users.find((user) => user.id === currentUserId)
+
   useEffect(() => {
     const fetchUsers = async () => {
       const response = await fetch("/api/user")
@@ -27,7 +32,6 @@ function App() {
     }
     fetchUsers()
   }, [])
-  // const [logs, setLogs] = useState([]);
   const addUser = async (name, email, password) => {
     const response = await fetch("/api/user", {
       method: "POST",
@@ -41,30 +45,27 @@ function App() {
       ...users,
       {
         ...newUser,
-        balance: 0
+        balance: 0,
+        transactions: []
       } 
     ])
-    // setUsers([
-    //   ...users,
-    //   {
-    //     name: name,
-    //     email: email,
-    //     password: password,
-    //     balance: 0,
-    //   }
-    // ])
-    // setLogs([
-    //   ...logs,
-    //   {
-    //     name: name,
-    //     email: email,
-    //     password: password,
-    //     balance: 0,
-    //   }
-    // ])
+    setCurrentUserId(newUser.id)
+  }
+  const signInUser = async (email, password) => {
+    const response = await fetch("/api/user/signin", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    if (response.ok) {
+      const existingUser = await response.json()
+      setCurrentUserId(existingUser.id)
+    }
   }
   const adjustUserBalance = async (value) => {
-    const loggedInUser = users[users.length - 1]
+    const loggedInUser = currentUser
     const response = await fetch(`/api/user/${loggedInUser._id}/transaction`, {
       method: "POST",
       body: JSON.stringify({
@@ -88,22 +89,6 @@ function App() {
       }
       return user
     }))
-    // setUsers([
-    //   ...users.slice(0, users.length - 1),
-    //   {
-    //     ...loggedInUser,
-    //     balance: loggedInUser.balance + value
-    //   }
-    // ])
-    // setLogs([
-    //   ...logs,
-    //   {
-    //     ...loggedInUser,
-    //     balance: loggedInUser.balance + value,
-    //     deposit: value > 0 ? value : undefined,
-    //     withdraw: value < 0 ? value : undefined,
-    //   }
-    // ])
   }
   let logs = [];
 
@@ -127,16 +112,18 @@ function App() {
     }
   }
 
+
   return (
     <Router>
-      <Navbar user={users[users.length - 1]} />
+      <Navbar user={currentUser} />
       <Container>
         <Row className="justify-content-center">
           <Routes>
             <Route path='/' element={<Home />} exact />
             <Route path='/CreateAccount' element={<CreateAccount addUser={addUser} />} />
-            <Route path='/Withdraw' element={<Withdraw onAdjust={adjustUserBalance} user={users[users.length - 1]} />} />
-            <Route path='/Deposits' element={<Deposit onAdjust={adjustUserBalance} user={users[users.length - 1]} />} />
+            <Route path='/SignIn' element={<SignIn signInUser={signInUser} />} />
+            <Route path='/Withdraw' element={<Withdraw onAdjust={adjustUserBalance} user={currentUser} />} />
+            <Route path='/Deposits' element={<Deposit onAdjust={adjustUserBalance} user={currentUser} />} />
             <Route path='/AllData' element={<AllData logs={logs} />} />
           </Routes>
         </Row>

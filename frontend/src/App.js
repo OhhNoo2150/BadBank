@@ -63,6 +63,10 @@ function App() {
       const existingUser = await response.json()
       setCurrentUserId(existingUser.id)
     }
+    return response.ok
+  }
+  const logOutUser = () => {
+    setCurrentUserId(undefined)
   }
   const adjustUserBalance = async (value) => {
     const loggedInUser = currentUser
@@ -116,7 +120,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar user={currentUser} />
+      <Navbar user={currentUser} onLogOut={logOutUser} />
       <Container>
         <Row className="justify-content-center">
           <Routes>

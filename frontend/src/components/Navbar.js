@@ -3,9 +3,8 @@ import Nav from "react-bootstrap/Nav";
 import BSNavbar from "react-bootstrap/Navbar";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Navbar({ user }) {
+export default function Navbar({ user, onLogOut }) {
     const location = useLocation()
-    console.log(location)
     return (
         <BSNavbar bg="light" expand="lg">
             <Container>
@@ -29,10 +28,14 @@ export default function Navbar({ user }) {
                             <Nav.Link className={location.pathname === "/Withdraw" ? "active" : ""} as={Link} to="/Withdraw">
                                 Withdraw
                             </Nav.Link>
+                            <Nav.Link onClick={onLogOut}>
+                                Log Out
+                            </Nav.Link>
                         </>}
                         <Nav.Link className={location.pathname === "/AllData" ? "active" : ""} as={Link} to="/AllData">
                             All Data
                         </Nav.Link>
+
                     </Nav>
                 </BSNavbar.Collapse>
             </Container>

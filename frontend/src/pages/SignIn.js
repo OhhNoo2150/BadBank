@@ -4,16 +4,24 @@ const CreateAccount = ({ signInUser }) => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [submitted, setSubmitted] = useState(false)
-    const handleSubmit = (event) => {
+    const [errored, setErrored] = useState(false)
+    const handleSubmit = async (event) => {
         event.preventDefault()
-        signInUser(email, password)
-        setSubmitted(true)
+        const success = await signInUser(email, password)
+        if (success) {
+            setSubmitted(true)
+            setErrored(false)
+        } else {
+            setErrored(true)
+        }
+
     }
     return (
         <div className='card' style={{ width: "36rem" }}>
             <div className='card-body'>
                 {!submitted ?
                     <form onSubmit={handleSubmit}>
+                        {errored && <div>Error logging in attempt again</div>}
                         <div className="mb-3 row">
                             <label for="staticEmail" className="col-sm-2 col-form-label">Email</label>
                             <div className="col-sm-10">

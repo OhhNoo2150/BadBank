@@ -88,8 +88,12 @@ body {
     border-radius: 15px;
     transition: 0.4s ease-in;
 }
+.NavDropdown{
+    margin-right: 50px;
+    background-color: black;
+}
 .nav-link.disabled {
-    margin-left: 50%;
+    margin-left: 5%;
     background-color: lightcoral;
     color: rgb(247, 240, 240);
     border-radius: 15px;

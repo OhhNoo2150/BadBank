@@ -79,6 +79,7 @@ body {
 .nav-link {
     color: beige;
     white-space: nowrap;
+    justify-content: flex-start;
 }
 .nav-link:hover,
 .nav-link.active {
@@ -87,8 +88,8 @@ body {
     border-radius: 15px;
     transition: 0.4s ease-in;
 }
-.nav-link.disabled{
-    margin-left: 335px;
+.nav-link.disabled {
+    margin-left: 50%;
     background-color: lightcoral;
     color: rgb(247, 240, 240);
     border-radius: 15px;

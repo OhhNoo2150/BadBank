@@ -1,7 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from "react-bootstrap/Nav";
 import BSNavbar from "react-bootstrap/Navbar";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+
 
 export default function Navbar({ user, onLogOut }) {
     const location = useLocation()
@@ -35,8 +36,11 @@ export default function Navbar({ user, onLogOut }) {
                         <Nav.Link className={location.pathname === "/AllData" ? "active" : ""} as={Link} to="/AllData">
                             All Data
                         </Nav.Link>
-
+                        {user !== undefined && <>
+                            <Nav.Link disabled>{user.name}</Nav.Link>
+                        </>}
                     </Nav>
+
                 </BSNavbar.Collapse>
             </Container>
         </BSNavbar>
